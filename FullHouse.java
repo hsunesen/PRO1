@@ -12,3 +12,23 @@ public int valueFullHouse() {
 			return 0;
 		}
 	}
+
+	public int valueTwoPair() {
+
+		int[] valuez = freqFaceValue();
+
+		int sum = 0;
+		int count = 0;
+
+		for (int i = 1; i < valuez.length; i++) {
+			if (valuez[i] == 2) {
+				count++;
+				sum += 2 * i;
+			}
+		}
+		if (count <= 1) {
+			sum = 0;
+		}
+
+		return sum;
+	}
